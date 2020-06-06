@@ -52,7 +52,7 @@ interface ICountryData {
 type ICountryRest = Record<ICountry['iso2'], ICountryData>
 
 const CountryStats: FC = () => {
-    alert("Hello! I am an alert box!!");
+    // alert("Hello! I am an alert box!!");
     getUserCurrentCountry();
     const { t } = useTranslation()
     const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', COUNTRY_DEFAULT);
