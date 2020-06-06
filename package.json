@@ -20,6 +20,7 @@
     "hammerjs": "^2.0.8",
     "i18next": "^19.3.4",
     "i18next-browser-languagedetector": "^4.0.2",
+    "public-ip": "^4.0.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-ga": "^3.0.0",
