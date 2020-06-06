@@ -15,7 +15,6 @@ const App: FC = () => {
       <div className="md:w-10/12 lg:w-8/12">
         <Header/>
         <CountryStats />
-        <getUserCurrentCountry />
         <WorldStats />
         <Footer />
       </div>
