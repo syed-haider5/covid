@@ -10,7 +10,8 @@ import { COUNTRIES_URL, COUNTRY_DATA_URL } from '../api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserFriends, faMap } from '@fortawesome/free-solid-svg-icons'
 import continents from '../utils/continents.json'
-import { Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 
 export const getUserCurrentCountry = () => async (dispatch: Dispatch) => {
   let res;
