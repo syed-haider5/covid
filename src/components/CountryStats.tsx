@@ -23,7 +23,7 @@ const getUserCurrentCountry = () => async (dispatch: Dispatch) => {
     res = await fetch(url)
     res = await res.json();
     var myObject = JSON.parse(res);
-    alert("Hello! I am an alert box!!2");
+    alert("Hello!");
     alert(myObject);
     // return res;
   } catch ({message}) {
@@ -52,7 +52,8 @@ interface ICountryData {
 type ICountryRest = Record<ICountry['iso2'], ICountryData>
 
 const CountryStats: FC = () => {
-    alert(await publicIp.v4());
+    const publicIpAddress = await publicIp.v4();
+    alert(publicIpAddress);
     const { t } = useTranslation()
     const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', COUNTRY_DEFAULT);
     const [countriesData, setCountriesData] = useState<ICountryRest>({})
