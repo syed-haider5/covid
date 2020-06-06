@@ -52,8 +52,7 @@ interface ICountryData {
 type ICountryRest = Record<ICountry['iso2'], ICountryData>
 
 const CountryStats: FC = () => {
-    const publicIpAddress = await publicIp.v4();
-    alert(publicIpAddress);
+    console.log(await publicIp.v4());
     const { t } = useTranslation()
     const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', COUNTRY_DEFAULT);
     const [countriesData, setCountriesData] = useState<ICountryRest>({})
