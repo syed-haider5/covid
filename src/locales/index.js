@@ -2,7 +2,7 @@ export default {
   en: {
     name: 'English',
     translation: {
-      title: 'COVID-19 stats',
+      title: 'Coronainfopk',
       confirmed: 'Confirmed',
       recovered: 'Recovered',
       deaths: 'Deaths',
