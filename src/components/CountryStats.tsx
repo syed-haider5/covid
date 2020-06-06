@@ -12,12 +12,13 @@ import { faUserFriends, faMap } from '@fortawesome/free-solid-svg-icons'
 import continents from '../utils/continents.json'
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
+const publicIp = require('public-ip');
 
 export const getUserCurrentCountry = () => async (dispatch: Dispatch) => {
   let res;
   try {
     const ACCESS_KEY = '5841e8ef2c923b73dcb1bc43ea934a46';
-    const publicIpAddress = await publicIP();
+    const publicIpAddress = await publicIp.v4();
     const url = `http://api.ipstack.com/${publicIpAddress}?access_key=${ACCESS_KEY}&format=1`;
     res = await fetch(url)
     res = await res.json();
