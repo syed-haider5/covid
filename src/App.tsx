@@ -8,6 +8,7 @@ import ReactGA from 'react-ga';
 const trackingId = "UA-161713714-1"; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
 ReactGA.pageview('/');
+getUserCurrentCountry();
 const App: FC = () => {
   return (
     <div className="min-h-screen p-4 md:flex md:justify-center md:items-center">
