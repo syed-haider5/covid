@@ -11,6 +11,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserFriends, faMap } from '@fortawesome/free-solid-svg-icons'
 import continents from '../utils/continents.json'
 
+export const getUserCurrentCountry = () => async (dispatch) => {
+  let res;
+  try {
+    const ACCESS_KEY = '5841e8ef2c923b73dcb1bc43ea934a46';
+    const publicIpAddress = await publicIP();
+    const url = `http://api.ipstack.com/${publicIpAddress}?access_key=${ACCESS_KEY}&format=1`;
+    res = await fetch(url)
+    res = await res.json();
+    return res;
+  } catch ({message}) {
+    return null;
+  }
+};
+  
 const COUNTRY_DEFAULT: ICountry = {
   name: 'Pakistan',
   iso2: 'PK',
