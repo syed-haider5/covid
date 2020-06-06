@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ReactGA from 'react-ga';
 
-const trackingId = "UA-161713714-1"; // Replace with your Google Analytics tracking ID
+const trackingId = "UA-161713714-1";
 ReactGA.initialize(trackingId);
 ReactGA.pageview('/');
 const App: FC = () => {
