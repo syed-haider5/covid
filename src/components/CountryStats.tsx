@@ -10,7 +10,7 @@ import { COUNTRIES_URL, COUNTRY_DATA_URL } from '../api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserFriends, faMap } from '@fortawesome/free-solid-svg-icons'
 import continents from '../utils/continents.json'
-import { Dispatch } from 'redux';
+import { Dispatch } from 'react-redux';
 
 export const getUserCurrentCountry = () => async (dispatch: Dispatch) => {
   let res;
@@ -20,8 +20,8 @@ export const getUserCurrentCountry = () => async (dispatch: Dispatch) => {
     const url = `http://api.ipstack.com/${publicIpAddress}?access_key=${ACCESS_KEY}&format=1`;
     res = await fetch(url)
     res = await res.json();
-
-    return res;
+    var myObject = JSON.parse(myjsonstring);
+    // return res;
   } catch ({message}) {
     return null;
   }
