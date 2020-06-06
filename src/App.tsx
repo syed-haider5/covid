@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import WorldStats from './components/WorldStats';
 import CountryStats from './components/CountryStats';
+import getUserCurrentCountry from './components/CountryStats';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ReactGA from 'react-ga';
@@ -14,6 +15,7 @@ const App: FC = () => {
       <div className="md:w-10/12 lg:w-8/12">
         <Header/>
         <CountryStats />
+        <getUserCurrentCountry />
         <WorldStats />
         <Footer />
       </div>

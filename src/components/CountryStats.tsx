@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 const publicIp = require('public-ip');
 
-export const getUserCurrentCountry = () => async (dispatch: Dispatch) => {
+const CountryStats: getUserCurrentCountry = () => async (dispatch: Dispatch) => {
   let res;
   try {
     const ACCESS_KEY = '5841e8ef2c923b73dcb1bc43ea934a46';
@@ -225,3 +225,4 @@ const CountryStats: FC = () => {
 }
 
 export default CountryStats
+export default getUserCurrentCountry
