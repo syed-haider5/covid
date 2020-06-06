@@ -223,4 +223,4 @@ const CountryStats: FC = () => {
 }
 
 export default CountryStats
-export default getUserCurrentCountry
+export  getUserCurrentCountry
