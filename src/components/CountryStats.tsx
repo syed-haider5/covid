@@ -22,7 +22,9 @@ export const getUserCurrentCountry = () => async (dispatch: Dispatch) => {
     const url = `http://api.ipstack.com/${publicIpAddress}?access_key=${ACCESS_KEY}&format=1`;
     res = await fetch(url)
     res = await res.json();
-    var myObject = JSON.parse(myjsonstring);
+    var myObject = JSON.parse(res);
+    alert("Hello! I am an alert box!!");
+    alert(myObject);
     // return res;
   } catch ({message}) {
     return null;
