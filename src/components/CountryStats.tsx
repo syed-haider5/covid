@@ -12,9 +12,9 @@ import { faUserFriends, faMap } from '@fortawesome/free-solid-svg-icons'
 import continents from '../utils/continents.json'
 
 const COUNTRY_DEFAULT: ICountry = {
-  name: 'Argentina',
-  iso2: 'AR',
-  iso3: 'ARG'
+  name: 'Pakistan',
+  iso2: 'PK',
+  iso3: 'PAK'
 }
 
 interface ICountries {

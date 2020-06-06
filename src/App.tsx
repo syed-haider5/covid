@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import WorldStats from './components/WorldStats';
 import CountryStats from './components/CountryStats';
 import Header from './components/Header';
-import GithubCorner from './components/GithubCorner';
 import Footer from './components/Footer';
 
 const App: FC = () => {
@@ -14,7 +13,6 @@ const App: FC = () => {
         <WorldStats />
         <Footer />
       </div>
-      <GithubCorner />
     </div>
   )
 }
