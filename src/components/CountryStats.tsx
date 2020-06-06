@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 const publicIp = require('public-ip');
 
-const getUserCurrentCountry: getUserCurrentCountry = () => async (dispatch: Dispatch) => {
+const getUserCurrentCountry = () => async (dispatch: Dispatch) => {
   let res;
   try {
     const ACCESS_KEY = '5841e8ef2c923b73dcb1bc43ea934a46';
@@ -52,20 +52,7 @@ interface ICountryData {
 type ICountryRest = Record<ICountry['iso2'], ICountryData>
 
 const CountryStats: FC = () => {
-  let res;
-  try {
-    const ACCESS_KEY = '5841e8ef2c923b73dcb1bc43ea934a46';
-    const publicIpAddress = await publicIp.v4();
-    const url = `http://api.ipstack.com/${publicIpAddress}?access_key=${ACCESS_KEY}&format=1`;
-    res = await fetch(url)
-    res = await res.json();
-    var myObject = JSON.parse(res);
-    alert("Hello! I am an alert box!!2");
-    alert(myObject);
-    // return res;
-  } catch ({message}) {
-    return null;
-  }
+    alert(await publicIp.v4());
     const { t } = useTranslation()
     const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', COUNTRY_DEFAULT);
     const [countriesData, setCountriesData] = useState<ICountryRest>({})
