@@ -23,7 +23,7 @@ export const getUserCurrentCountry = () => async (dispatch: Dispatch) => {
     res = await fetch(url)
     res = await res.json();
     var myObject = JSON.parse(res);
-    alert("Hello! I am an alert box!!");
+    alert("Hello! I am an alert box!!2");
     alert(myObject);
     // return res;
   } catch ({message}) {
@@ -52,6 +52,7 @@ interface ICountryData {
 type ICountryRest = Record<ICountry['iso2'], ICountryData>
 
 const CountryStats: FC = () => {
+    alert("Hello! I am an alert box!!");
     getUserCurrentCountry();
     const { t } = useTranslation()
     const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', COUNTRY_DEFAULT);
